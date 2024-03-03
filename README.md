@@ -1,4 +1,4 @@
-# **Olist Dashboard Guide**
+# **Explore Payments Dataset Dashboard Guide**
 
 ## **Setup Environment**
 ```
