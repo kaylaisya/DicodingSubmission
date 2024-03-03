@@ -6,7 +6,7 @@ import seaborn as sns
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Membuat tabel payments
-payments_df = pd.read_csv("C:/Users/acer/Downloads/order_payments_dataset.csv")
+payments_df = pd.read_csv("https://raw.githubusercontent.com/kaylaisya/submission/main/order_payments_dataset.csv")
 
 # Membuat gambar dan sumbu untuk setiap histogram
 fig, axs = plt.subplots(1, 3, figsize=(15, 5))
@@ -41,15 +41,7 @@ condition_more_than_installments = payments_df['payment_installments'] > maximum
 payments_df.loc[condition_more_than_installments, 'payment_installments'] = maximum_installments
 payments_df.loc[condition_lower_than_installments, 'payment_installments'] = minimum_installments
 
-# Plot histogram
-payments_df['payment_installments'].plot(kind='hist', bins=20, title='Distribusi Payment Installments')
-plt.show()
-
 # ============================================================================================================
-
-correlation = payments_df['payment_installments'].corr(payments_df['payment_value'])
-print(f"Korelasi antara angsuran pembayaran dengan nilai pembayaran: {correlation:.2f}")
-
 st.title('Explore Payments Dataset 💸🛍️✨')
 
 st.sidebar.image("online-shop_365202.png", width=200)
