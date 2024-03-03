@@ -44,7 +44,6 @@ payments_df.loc[condition_lower_than_installments, 'payment_installments'] = min
 # ============================================================================================================
 st.title('Explore Payments Dataset 💸🛍️✨')
 
-st.sidebar.image("online-shop_365202.png", width=200)
 page = st.sidebar.selectbox("Pilih halaman", ["Home", "Analisis Data Eksploratori", "Analisis Korelasi"])
 
 if page == "Home":
